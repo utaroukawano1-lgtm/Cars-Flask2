@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="three-column">
+    <img src="{{ Cars[6] }}" alt ="{{ Cars[2] }}">
+    <div class="info">
+        <h1>Top Speed: {{ Cars[4] }}mph</h1>
+        <h1>cost: ${{ Cars[3] }}millions</h1>
+        <h1>Description</h1>
+        <h1>{{ Cars[5] }}</h1>
+    </div>
+</div>
+{% endblock %}
+

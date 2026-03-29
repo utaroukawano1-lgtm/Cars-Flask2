@@ -1,0 +1,79 @@
+-- database: /Users/yutarokawano/Documents/Cars Flask/cars.db
+
+SELECT * FROM Cars;
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Chiron", 420, 3000000, "The Bugatti Chiron delivers immense power through its quad-turbo W16 engine, combining luxury, precision engineering, and extreme speed into a hypercar designed for elite performance and comfort.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Chiron Pur Sport", 350, 3600000, "Focused on agility and handling, the Chiron Pur Sport sacrifices top speed for sharper cornering, lighter weight, and enhanced driver engagement, creating a more dynamic and track-oriented driving experience.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Chiron Super Sport 300+", 490, 3900000, "A record-setting machine built for speed, combining aerodynamic efficiency and massive horsepower, achieving over 300 mph while maintaining stability, luxury, and engineering excellence in extreme conditions.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Mistral", 420, 5000000, "The Bugatti Mistral is a rare open-top roadster featuring the iconic W16 engine, blending high-speed capability with exclusivity, elegant design, and a unique driving experience without a roof.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Divo", 380, 5800000, "Designed for cornering rather than speed, the Bugatti Divo offers enhanced aerodynamics and downforce, delivering exceptional handling performance while maintaining luxury craftsmanship and exclusivity in extremely limited production.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Aventador SVJ", 350, 517000, "The Aventador SVJ is a track-focused V12 supercar with aggressive aerodynamics, delivering extreme performance, rapid acceleration, and sharp handling, combined with Lamborghini’s iconic design and powerful naturally aspirated engine.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Huracan STO", 310, 327000, "Inspired by racing, the Huracan STO is lightweight and precise, offering exceptional track performance, aerodynamic efficiency, and a thrilling driving experience with a naturally aspirated V10 engine.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Revuelto", 350, 600000, "Lamborghini’s first V12 hybrid supercar, the Revuelto combines electrification with raw performance, delivering instant torque, improved efficiency, and futuristic design while maintaining Lamborghini’s aggressive identity.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Sian FKP 37", 350, 3600000, "A limited hybrid hypercar using supercapacitor technology, the Sian blends innovative engineering with V12 performance, offering rapid acceleration, distinctive styling, and advanced energy storage systems.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Centenario", 350, 2000000, "Built to celebrate Lamborghini’s founder, the Centenario features advanced aerodynamics, lightweight construction, and extreme performance, delivering both high-speed capability and collectible exclusivity in a limited production run.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("911 GT3 RS", 296, 241000, "A track-focused sports car engineered for precision, offering exceptional aerodynamics, high-revving performance, and outstanding handling, making it one of the most driver-focused cars in Porsche’s lineup.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("918 Spyder", 345, 845000, "A hybrid hypercar combining electric motors with a V8 engine, delivering incredible acceleration, efficiency, and advanced technology, representing Porsche’s innovation in performance and sustainable engineering.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Taycan Turbo S", 260, 210000, "An all-electric performance sedan delivering instant acceleration, advanced technology, and precise handling, combining sustainability with Porsche’s signature driving dynamics and modern luxury features.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Carrera GT", 334, 440000, "A legendary supercar powered by a V10 engine, known for its raw driving experience, manual transmission, and lightweight construction, making it one of the most iconic Porsche models ever built.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("911 Turbo S", 330, 230000, "A high-performance everyday supercar combining comfort and speed, offering rapid acceleration, advanced all-wheel-drive technology, and refined design for both daily driving and extreme performance.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("SF90 Stradale", 340, 524000, "A plug-in hybrid supercar delivering immense power, combining electric motors and a V8 engine for incredible acceleration, cutting-edge technology, and Ferrari’s signature performance and design.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("LaFerrari", 350, 1500000, "Ferrari’s first hybrid hypercar, blending Formula One technology with road performance, offering extreme power, advanced aerodynamics, and limited production exclusivity for collectors and enthusiasts.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("812 Superfast", 340, 335000, "A front-engine V12 grand tourer delivering immense power, smooth handling, and luxurious comfort, combining Ferrari’s racing heritage with everyday usability and refined high-speed performance.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("F8 Tributo", 340, 280000, "A mid-engine supercar celebrating Ferrari’s V8 legacy, offering balanced performance, aerodynamic efficiency, and responsive handling, making it one of the most engaging modern Ferraris to drive.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Enzo", 355, 650000, "Named after the company’s founder, the Enzo is a Formula One-inspired hypercar featuring advanced aerodynamics, carbon-fiber construction, and extreme performance in a highly exclusive limited production model.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Jesko", 480, 2800000, "The Koenigsegg Jesko delivers extreme performance through advanced aerodynamics and a powerful twin-turbo engine, combining track capability with cutting-edge engineering and innovative transmission technology.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Jesko Absolut", 500, 3000000, "Designed purely for maximum speed, the Jesko Absolut removes drag elements to achieve record-breaking performance, representing Koenigsegg’s pursuit of the fastest production car ever built.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Agera RS", 447, 2500000, "A record-breaking hypercar known for achieving the highest speed for a production car, combining lightweight design, powerful performance, and advanced aerodynamics in a limited production model.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Regera", 410, 2000000, "A hybrid hypercar using direct-drive technology instead of a traditional gearbox, delivering seamless acceleration, extreme performance, and innovative engineering unlike any conventional vehicle.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Gemera", 400, 1700000, "A four-seat hybrid hypercar combining practicality with extreme performance, offering innovative engineering, advanced technology, and the ability to deliver hypercar speed with everyday usability.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Huayra", 370, 2600000, "A luxurious hypercar combining art and engineering, featuring a twin-turbo V12 engine, lightweight materials, and exquisite craftsmanship, delivering both performance and unique handcrafted design.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Huayra BC", 370, 2800000, "A lighter, more aggressive version of the Huayra, offering enhanced aerodynamics, increased power, and track-focused performance while maintaining Pagani’s signature craftsmanship and exclusivity.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Zonda F", 345, 1400000, "One of the most iconic Pagani models, the Zonda F features a powerful V12 engine, lightweight construction, and timeless design, delivering an unforgettable driving experience.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Zonda Cinque", 350, 1800000, "An ultra-rare version of the Zonda, limited to just five units, combining extreme performance, advanced materials, and bespoke craftsmanship for collectors seeking exclusivity and speed.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Utopia", 350, 2500000, "Pagani’s latest creation focuses on simplicity and driver engagement, combining a powerful V12 engine with lightweight design, manual transmission, and artistic craftsmanship in a modern hypercar.");
+
+-- All Cars
+SELECT Makers.Name,Cars.Model FROM Cars
+JOIN Makers ON Makers.MakerID = Cars.MakerID;
+
+--Cars of one make
+SELECT Cars.Model FROM Cars
+JOIN Makers ON Makers.MakerID = Cars.MakerID
+WHERE Makers.Name = "Bugatti";
+
+SELECT Cars.CarsID,Makers.Name,Cars.Model,Cars.ImageURL
+FROM Cars
+JOIN Makers ON Makers.MakerID=Cars.MakerID; 
+
+SELECT * FROM Cars 
+JOIN Makers ON Makers.MakerID=Cars.MakerID
+WHERE Cars.CarsID = 2;
