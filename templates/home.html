@@ -1,9 +1,20 @@
 {% extends "layout.html" %}
 
 {% block body %}
+
+<div class="one-column">
+    <h2>🔥 New Bugatti Model</h2>
+
+    {% for Cars in trending[:0] %}    
+    <div class="w3-card-4 trending-card">
+        <h1>{{ Cars[1] }} {{ Cars[2] }}</h1>
+        <img src="{{ Cars[3] }}" alt="{{ Cars[2] }}">
+    </div>
+    {% endfor %}
+</div>
+
 <div class="three-column">
     {% for Cars in results %}
-
     <div class="w3-card-4">
         <h1>{{ Cars[1] }} {{ Cars[2] }}</h1>
         <a href="{{ url_for('Cars', id=Cars[0]) }}">

@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request, redirect, url_for
 import sqlite3
 
 DATABASE = "Cars.db"
@@ -30,9 +30,18 @@ def home():
             FROM Cars
             JOIN Makers ON Makers.MakerID=Cars.MakerID;
             """
+    sql_trending = """
+        SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
+        FROM Cars
+        JOIN Makers ON Makers.MakerID = Cars.MakerID
+        ORDER BY Cars.CarsID DESC
+        LIMIT 3;
+    """
     results = query_db(sql)
-    print("results", results)
-    return render_template("home.html",results=results)
+    trending = query_db(sql_trending)
+
+    return render_template("home.html", results=results, trending=trending)
+    
 
 
 
@@ -61,3 +70,23 @@ def maker(id):
     
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route("/search")
+def search():
+    query = request.args.get("query")
+
+    cars = {
+        "bugatti": 0,
+        "lamborghini": 1,
+        "porsche": 2,
+        "ferrari": 3,
+        "koenigsegg": 4,
+        "pagani": 5
+    }
+
+    if query:
+        query = query.lower()
+        if query in cars:
+            return redirect(url_for("maker", id=cars[query]))
+
+    return "Car not found"
