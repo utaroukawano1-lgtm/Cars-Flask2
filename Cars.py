@@ -68,9 +68,6 @@ def maker(id):
 
     return render_template("makers.html", results=results)
     
-if __name__ == "__main__":
-    app.run(debug=True)
-
 @app.route("/search")
 def search():
     query = request.args.get("query")
@@ -83,10 +80,17 @@ def search():
         "koenigsegg": 4,
         "pagani": 5
     }
-
+    supercars = {
+        "bugatti chiron": 0,
+    }
     if query:
         query = query.lower()
         if query in cars:
             return redirect(url_for("maker", id=cars[query]))
+        elif query in supercars:
+            return redirect(url_for("Cars", id=supercars[query]))
 
     return "Car not found"
+
+if __name__ == "__main__":
+    app.run(debug=True)
