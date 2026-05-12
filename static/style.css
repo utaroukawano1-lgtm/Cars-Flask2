@@ -1,31 +1,39 @@
 body,h1,h2,h3,h4,h5,h6 {
     font-family: "Righteous", sans-serif;
 }
+body {
+    background-color: rgb(39, 38, 38);
+    color: rgb(89, 159, 235); /* makes text visible */
+}
 
+/* FEATURED LARGE IMAGE */
+.featured-image {
+    width: 800px;
+    height: auto;
+    display: block;
+    margin-left: 70px;
+    border-radius: 10px;
+}
 .three-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
-    padding: 0 20px;
+    padding: 20px;
+}
+.three-column .w3-card-4 {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-/* FIRST item = big full-width */
-.three-column .w3-card-4:first-child {
-    grid-column: span 3;
-}
 
-/* Big image */
-.three-column .w3-card-4:first-child img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-}
-
-/* Rest of images */
-.three-column img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+/* 3 COLUMN GRID IMAGES */
+.grid-image {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 .search {
     --padding: 14px;

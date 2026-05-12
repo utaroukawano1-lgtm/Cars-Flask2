@@ -31,21 +31,19 @@ def home():
             JOIN Makers ON Makers.MakerID=Cars.MakerID;
             """
     sql_trending = """
-        SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
-        FROM Cars
-        JOIN Makers ON Makers.MakerID = Cars.MakerID
-        ORDER BY Cars.CarsID DESC
-        LIMIT 3;
-    """
+SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
+FROM Cars
+JOIN Makers ON Makers.MakerID = Cars.MakerID
+WHERE Makers.Name = 'Bugatti'
+ORDER BY Cars.CarsID DESC
+LIMIT 1;
+"""
     results = query_db(sql)
     trending = query_db(sql_trending)
 
-    return render_template("home.html", results=results, trending=trending)
+    return render_template("home.html", results=results, trending=trending,)
     
 
-
-
-   
 @app.route("/Cars/<int:id>")
 def Cars(id):
     sql = """SELECT * FROM Cars 
@@ -53,8 +51,18 @@ def Cars(id):
     WHERE Cars.CarsID = ?;"""
     result = query_db(sql, [id,],True)
     return render_template("Cars.html" , Cars = result)
-   
 
+@app.route("/article/<int:id>")
+def article(id):
+    sql = """
+        SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
+        FROM Cars
+        JOIN Makers ON Makers.MakerID = Cars.MakerID
+        WHERE Cars.CarsID = ?;
+    """
+    car = query_db(sql, [id], one=True)
+
+    return render_template("article.html", car=car)
 
 @app.route('/makers/<int:id>')
 def maker(id):
