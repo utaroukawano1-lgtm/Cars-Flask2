@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-<div class="one-column">
     <h2>Featured Article</h2>
+
+<div class="two-column">
     {% for car in trending %}
     <div class="w3-card-4 trending-card">
         <a href="{{ url_for('article', id=car[0]) }}">
             <img src="https://b2160055.smushcdn.com/2160055/wp-content/uploads/2025/12/mclaren.jpg?lossy=2&strip=1&webp=1"
-     style="width:800px; height:auto; display:block; margin-left:70px;">        </a>
+     style="width:700px; height:auto; margin-left:70px;">        </a>
     </div>
     <div class="featured-description">
         <h3>{{ car[1] }} {{ car[2] }}</h3>
@@ -16,9 +16,6 @@
             Experience the power, luxury, and cutting-edge engineering of this incredible supercar.
             Built for speed and designed for attention, this model represents the future of performance driving.
         </p>
-        <a href="{{ url_for('article', id=car[0]) }}" class="read-more">
-            Read More
-        </a>
 
     </div>
     {% endfor %}

@@ -14,9 +14,8 @@ body {
     padding: 20px;
 }
 
-
 .featured-image {
-    width: 550px;
+    width: 700px;
     height: auto;
     display: block;
     margin-left: 70px;
@@ -33,15 +32,6 @@ max-width: 350px;
     line-height: 1.6;
     color: #444;
 }
-.read-more {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: white;
-    background: black;
-    padding: 10px 18px;
-    border-radius: 5px;
-}
 .three-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,7 +44,26 @@ max-width: 350px;
     text-align: center;
 }
 
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 20px;
+}
 
+.three-column .w3-card-4 {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-image {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
 /* 3 COLUMN GRID IMAGES */
 .grid-image {
     width: 300px;
@@ -62,6 +71,12 @@ max-width: 350px;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
+}
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 20px;
 }
 .search {
     --padding: 14px;
@@ -86,4 +101,23 @@ max-width: 350px;
     border: none;
     background: transparent;
     flex: 1;
+}
+
+.article {
+    display: flex;
+}
+
+.article-image {
+    width: 650px;
+}
+
+.article-text {
+    margin-left: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 120px;
+    border-radius: 15px;
+
 }

@@ -1,14 +1,25 @@
 {% extends "layout.html" %}
-
 {% block body %}
-  <div class="three-column">
+<div class="three-column">
+
     {% for Cars in results %}
-    <a href="{{ url_for('Cars', id=Cars[0]) }}">
-        <div class="w3-card-4">
-            <h1>{{ Cars[1] }} {{ Cars[2] }}</h1>
-            <img src="{{ Cars[3] }}" alt="{{ Cars[2] }}">
-        </div>
-    </a>
+
+    <div class="w3-card-4">
+
+        <h2>{{ Cars[1] }} {{ Cars[2] }}</h2>
+
+        <a href="{{ url_for('Cars', id=Cars[0]) }}">
+
+            <img src="{{ Cars[3] }}"
+                 alt="{{ Cars[2] }}"
+                 class="grid-image">
+
+        </a>
+
+    </div>
+
     {% endfor %}
+
 </div>
+
 {% endblock %}
