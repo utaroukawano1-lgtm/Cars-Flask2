@@ -39,9 +39,11 @@ max-width: 350px;
     padding: 20px;
 }
 .three-column .w3-card-4 {
-    padding: 15px;
+   padding: 15px;
     border-radius: 10px;
     text-align: center;
+    width: 400px;
+    height: auto;
 }
 
 .three-column {
@@ -55,6 +57,8 @@ max-width: 350px;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    width: 400px;
+    height: auto;
 }
 
 .grid-image {
@@ -120,4 +124,9 @@ max-width: 350px;
     height: 120px;
     border-radius: 15px;
 
+}
+
+.bottom_descrpition{
+    width: 400px;
+    height: 300px;
 }
