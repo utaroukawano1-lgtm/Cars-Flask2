@@ -75,7 +75,8 @@ def maker(id):
     results = query_db(sql, (id,))
 
     return render_template("makers.html", results=results)
-    
+
+
 @app.route("/search")
 def search():
     query = request.args.get("query")
@@ -99,6 +100,10 @@ def search():
             return redirect(url_for("Cars", id=supercars[query]))
 
     return "Car not found"
+
+@app.route("/Contact")
+def Contact():
+    return render_template("Contact.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
