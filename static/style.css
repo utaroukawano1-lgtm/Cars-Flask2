@@ -59,8 +59,25 @@ max-width: 350px;
     text-align: center;
     width: 400px;
     height: auto;
+.makers {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 12px;
 }
 
+.makers h2 {
+    color: rgb(89, 159, 235);
+    margin-bottom: 15px;
+}
+.grid-image {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+}
 .grid-image {
     width: 300px;
     height: auto;
@@ -126,7 +143,8 @@ max-width: 350px;
 
 }
 
-.bottom_descrpition{
-    width: 400px;
-    height: 300px;
+.bottom_description{
+    text-align: center;
+    width: 1420px;
+
 }
