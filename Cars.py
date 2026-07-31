@@ -80,7 +80,7 @@ def maker(id):
 @app.route("/search")
 def search():
     query = request.args.get("query")
-
+    print("query:",query)
     cars = {
         "bugatti": 0,
         "lamborghini": 1,

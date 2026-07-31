@@ -148,3 +148,8 @@ max-width: 350px;
     width: 1420px;
 
 }
+.image img{
+    width: 1000px;
+    height: auto;
+
+}
