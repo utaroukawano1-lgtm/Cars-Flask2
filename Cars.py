@@ -22,7 +22,7 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-
+#homepage
 @app.route("/")
 def home():
     sql = """
@@ -30,6 +30,7 @@ def home():
             FROM Cars
             JOIN Makers ON Makers.MakerID=Cars.MakerID;
             """
+#trending articles about supercars
     sql_trending = """
 SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
 FROM Cars
@@ -43,7 +44,6 @@ LIMIT 1;
 
     return render_template("home.html", results=results, trending=trending,)
     
-
 @app.route("/Cars/<int:id>")
 def Cars(id):
     sql = """SELECT * FROM Cars 
@@ -76,7 +76,7 @@ def maker(id):
 
     return render_template("makers.html", results=results)
 
-
+#searchbar
 @app.route("/search")
 def search():
     query = request.args.get("query")
@@ -100,7 +100,7 @@ def search():
             return redirect(url_for("Cars", id=supercars[query]))
 
     return "Car not found"
-
+#contact page
 @app.route("/Contact")
 def Contact():
     return render_template("Contact.html")
