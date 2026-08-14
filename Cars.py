@@ -76,7 +76,7 @@ def maker(id):
 
     return render_template("makers.html", results=results)
 
-#searchbar
+# searchbar
 @app.route("/search")
 def search():
     query = request.args.get("query")
