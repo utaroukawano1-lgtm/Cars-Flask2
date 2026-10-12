@@ -1,14 +1,17 @@
+
 from flask import Flask, g, render_template, request, redirect, url_for
 import sqlite3
 
 DATABASE = "Cars.db"
 app = Flask(__name__)
+# Opens a new database
 
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
     return db
+# Automatically closes the database connection
 
 @app.teardown_appcontext
 def close_connection(exception):
@@ -43,6 +46,8 @@ LIMIT 1;
     trending = query_db(sql_trending)
 
     return render_template("home.html", results=results, trending=trending,)
+# Route to display detailed information for a specific car based on its ID
+
 @app.route("/Cars/<int:id>")
 def Cars(id):
     sql = """SELECT * FROM Cars 
@@ -50,6 +55,7 @@ def Cars(id):
     WHERE Cars.CarsID = ?;"""
     result = query_db(sql, [id,],True)
     return render_template("Cars.html" , Cars = result)
+# Route to display a specific article view for a car using its ID
 
 @app.route("/article/<int:id>")
 def article(id):
@@ -62,6 +68,7 @@ def article(id):
     car = query_db(sql, [id], one=True)
 
     return render_template("article.html", car=car)
+# Route to display all cars belonging to a specific manufacturer ID
 
 @app.route('/makers/<int:id>')
 def maker(id):
