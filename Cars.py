@@ -30,7 +30,7 @@ def home():
             FROM Cars
             JOIN Makers ON Makers.MakerID=Cars.MakerID;
             """
-#trending articles about supercars
+ # trending articles about supercars
     sql_trending = """
 SELECT Cars.CarsID, Makers.Name, Cars.Model, Cars.ImageURL
 FROM Cars
@@ -43,7 +43,6 @@ LIMIT 1;
     trending = query_db(sql_trending)
 
     return render_template("home.html", results=results, trending=trending,)
-    
 @app.route("/Cars/<int:id>")
 def Cars(id):
     sql = """SELECT * FROM Cars 
