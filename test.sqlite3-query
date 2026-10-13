@@ -1,0 +1,13 @@
+-- database: ./Cars.db
+
+SELECT * FROM car_feature;
+
+
+SELECT * FROM Cars 
+    JOIN Makers ON Makers.MakerID=Cars.MakerID
+    WHERE Cars.CarsID = ?;
+
+SELECT feature.feature from car_feature
+JOIN Cars ON car_feature.car_id=Cars.CarsID
+JOIN feature ON car_feature.feature_id=feature.id
+WHERE Cars.CarsID=4;

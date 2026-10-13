@@ -53,8 +53,17 @@ def Cars(id):
     sql = """SELECT * FROM Cars 
     JOIN Makers ON Makers.MakerID=Cars.MakerID
     WHERE Cars.CarsID = ?;"""
-    result = query_db(sql, [id,],True)
-    return render_template("Cars.html" , Cars = result)
+    car_data = query_db(sql, [id,],True)
+
+    #do the feature query
+ 
+    sql = """ SELECT feature.feature from car_feature
+    JOIN Cars ON car_feature.car_id=Cars.CarsID
+    JOIN feature ON car_feature.feature_id=feature.id
+    WHERE Cars.CarsID=?; """
+    #get the results as features
+    features = query_db(sql, [id,])
+    return render_template("Cars.html" , Cars = car_data, features=features)
 # Route to display a specific article view for a car using its ID
 
 @app.route("/article/<int:id>")

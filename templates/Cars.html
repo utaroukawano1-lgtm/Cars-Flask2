@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
+
+
 <div class="image">
         <img src="{{ Cars[6] }}" alt ="{{ Cars[2] }}">
     <div class="info">
@@ -7,7 +9,13 @@
         <h1>cost: ${{ Cars[3] }}millions</h1>
         <h1>Description</h1>
         <h1>{{ Cars[5] }}</h1>
+        <!-- loop through and show all the features -->
+             {% for feature in features %}
+             <h1>features:</h1><h1>{{feature[0]}}</h1>
+{% endfor %}
     </div>
 </div>
+
+
 {% endblock %}
 
